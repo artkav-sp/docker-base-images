@@ -76,11 +76,3 @@ RUN pecl install amqp \
  && docker-php-ext-enable amqp
 
 COPY --from=composer-image /composer /usr/local/bin/composer
-
-RUN addgroup -g 1000 laravel \
-    && adduser -D -u 1000 -G laravel laravel
-
-EXPOSE 9000
-
-CMD ["php-fpm"]
-
