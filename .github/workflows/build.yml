@@ -27,10 +27,10 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  BASE_IMAGE_NAME: ${{ github.repository }}-base
+  BASE_IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-base:
+  build:
     name: Build Base Image
     runs-on: ubuntu-latest
     
