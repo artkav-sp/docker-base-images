@@ -75,4 +75,8 @@ RUN pecl install imagick \
 RUN pecl install amqp \
  && docker-php-ext-enable amqp
 
+# OpenTelemetry PHP extension
+RUN pecl install opentelemetry \
+    && docker-php-ext-enable opentelemetry
+
 COPY --from=composer-image /composer /usr/local/bin/composer
